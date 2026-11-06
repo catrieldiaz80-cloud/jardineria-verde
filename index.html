@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jardinería Verde Profesional - Servicio de Corte de Césped</title>
+    <title>Jardinería Verde Profesional - Mantenimiento Integral</title>
     <style>
         :root {
             --verde-oscuro: #1b4332;
             --verde-principal: #2d6a4f;
             --verde-claro: #d8f3dc;
-            --gris-fondo: #f8f9fa;
+            --gris-fondo: #f4f7f5;
             --texto-oscuro: #212529;
         }
 
@@ -53,8 +53,8 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -65,14 +65,14 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
 
         .hero p {
-            font-size: 1.3rem;
-            max-width: 600px;
+            font-size: 1.4rem;
+            max-width: 700px;
             margin-bottom: 2rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
         }
@@ -80,54 +80,76 @@
         .btn-cta {
             background-color: var(--verde-principal);
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 0.9rem 2.5rem;
             border: none;
             border-radius: 5px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             text-decoration: none;
-            transition: background 0.3s;
-            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .btn-cta:hover {
             background-color: var(--verde-oscuro);
+            transform: translateY(-2px);
+        }
+
+        .services-section {
+            background: linear-gradient(rgba(244, 247, 245, 0.9), rgba(244, 247, 245, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
+            padding: 5rem 1rem;
+        }
+
+        .services-title {
+            text-align: center;
+            color: var(--verde-oscuro);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .services {
             max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 1rem;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
         .card {
             background: white;
-            padding: 2.5rem;
+            padding: 2.5rem 1.5rem;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             border-top: 5px solid var(--verde-principal);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .card h2 {
             color: var(--verde-oscuro);
             margin-bottom: 1rem;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
 
         .contact-section {
             background-color: var(--verde-oscuro);
             color: white;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
         }
 
         .contact-section h2 {
             margin-bottom: 2rem;
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
 
         .contact-info {
@@ -136,7 +158,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         .contact-item a {
@@ -161,6 +183,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1.1rem; }
+            .services-title { font-size: 2rem; }
         }
     </style>
 </head>
@@ -173,19 +196,34 @@
     </header>
 
     <section class="hero">
-        <h1>Servicio de Corte de Césped Profesional</h1>
-        <p>Transformamos tu jardín en un espacio impecable</p>
-        <a href="https://wa.me" target="_blank" class="btn-cta">¡Contáctanos hoy mismo!</a>
+        <h1>Servicios Integrales de Jardinería</h1>
+        <p>Mantenimiento profesional, poda y soluciones completas para tus espacios verdes</p>
+        <a href="https://wa.me" target="_blank" class="btn-cta">¡Pedí tu presupuesto hoy!</a>
     </section>
 
-    <section class="services">
-        <div class="card">
-            <h2>📅 Abonos Mensuales</h2>
-            <p>Mantenimiento constante y programado para tu tranquilidad. Nos encargamos de que tu pasto esté siempre perfecto sin que tengas que preocuparte por nada.</p>
-        </div>
-        <div class="card">
-            <h2>💬 Cotización Sin Costo</h2>
-            <p>Presupuesto rápido y adaptado a tus necesidades específicas. Evaluamos tu espacio de manera gratuita para ofrecerte la mejor tarifa.</p>
+    <section class="services-section">
+        <h2 class="services-title">Nuestros Servicios</h2>
+        <div class="services">
+            <div class="card">
+                <div class="card-icon">✂️</div>
+                <h2>Corte de Césped</h2>
+                <p>Mantenimiento constante con abonos mensuales programados para tu comodidad.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌳</div>
+                <h2>Poda en Altura</h2>
+                <p>Trabajos profesionales y seguros para mantener tus árboles sanos y controlados.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧹</div>
+                <h2>Limpieza General</h2>
+                <p>Desmalezado, recolección de residuos verdes y puesta a punto integral de patios y jardines.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💵</div>
+                <h2>Cotización Sin Costo</h2>
+                <p>Presupuestos adaptados a las dimensiones de tu terreno de forma rápida y gratuita.</p>
+            </div>
         </div>
     </section>
 
